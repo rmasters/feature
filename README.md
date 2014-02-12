@@ -52,3 +52,27 @@ and database require the toggle definitions to be pre-defined.
     $features = new FeatureManager;
     $storage = new Feature\Storage\Structured($features, $featureToggles);
     $storage->load();
+
+## Framework integrations
+
+### Laravel 4
+
+Feature provides a ServiceProvider and Facade for Laravel 4. It automatically
+puts the current user (from `Auth::user()`) into the FeatureManager. To
+integrate into your application make these changes to `app/config/app.php`:
+
+    'providers' => array(
+    
+        // ...
+
+        'Feature\Laravel\FeatureServiceProvider',
+
+    ),
+
+    'aliases' => array(
+
+        // ...
+
+        'Feature' => 'Feature\Laravel\Feature',
+
+    )

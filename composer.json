@@ -16,5 +16,12 @@
             "Feature\\": "src",
             "Feature\\Tests\\": "tests"
         }
+    },
+    "require-dev": {
+        "illuminate/support": "4.*",
+        "mockery/mockery": "0.*"
+    },
+    "suggest": {
+        "laravel/framework": "Provides service provider for Laravel integration"
     }
 }
