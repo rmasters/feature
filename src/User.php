@@ -39,26 +39,30 @@ class User
     {
         $server = $server ?: $_SERVER;
 
+        $get = function ($key, $default = null) use ($server) {
+            return isset($server[$key]) ? $server[$key] : $default;
+        };
+
         // Remote client IP/hostname
-        $this->set(static::REMOTE_ADDR, $_SERVER['REMOTE_ADDR']);
-        $this->set(static::REMOTE_NAME, $_SERVER['REMOTE_HOST']);
+        $this->set(static::REMOTE_ADDR, $get('REMOTE_ADDR'));
+        $this->set(static::REMOTE_NAME, $get('REMOTE_HOST'));
 
         // Server IP/hostname
-        $this->set(static::HOST_ADDR, $_SERVER['SERVER_ADDR']);
-        $this->set(static::HOST_NAME, $_SERVER['SERVER_NAME']);
+        $this->set(static::HOST_ADDR, $get('SERVER_ADDR'));
+        $this->set(static::HOST_NAME, $get('SERVER_NAME'));
 
         // Query string vars
-        $qs = parse_str($_SERVER['QUERY_STRING']);
+        $qs = parse_str($get('QUERY_STRING'));
         $this->set(static::QUERY_STRING, $qs);
 
         // Client headers
-        $this->set(static::USER_ACCEPT, $_SERVER['HTTP_ACCEPT']);
-        $this->set(static::USER_ACCEPT_CHARSET, $_SERVER['HTTP_ACCEPT_CHARSET']);
-        $this->set(static::USER_ACCEPT_ENCODING, $_SERVER['HTTP_ACCEPT_ENCODING']);
-        $this->set(static::USER_ACCEPT_LANGUAGE, $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-        $this->set(static::USER_HOST, $_SERVER['HTTP_HOST']);
-        $this->set(static::USER_REFERER, $_SERVER['HTTP_REFERER']);
-        $this->set(static::USER_AGENT, $_SERVER['USER_AGENT']);
+        $this->set(static::USER_ACCEPT, $get('HTTP_ACCEPT'));
+        $this->set(static::USER_ACCEPT_CHARSET, $get('HTTP_ACCEPT_CHARSET'));
+        $this->set(static::USER_ACCEPT_ENCODING, $get('HTTP_ACCEPT_ENCODING'));
+        $this->set(static::USER_ACCEPT_LANGUAGE, $get('HTTP_ACCEPT_LANGUAGE'));
+        $this->set(static::USER_HOST, $get('HTTP_HOST'));
+        $this->set(static::USER_REFERER, $get('HTTP_REFERER'));
+        $this->set(static::USER_AGENT, $get('USER_AGENT'));
     }
 
     public function get($name, $default = null)
