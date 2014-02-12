@@ -6,8 +6,8 @@ interface Toggle
 {
     /**
      * Whether a feature is enabled for the given user
-     * @param mixed $user User attributes
+     * @param \Feature\User $user User attributes
      * @return boolean
      */
-    public function __invoke($user);
+    public function __invoke(User $user);
 }

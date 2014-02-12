@@ -8,8 +8,8 @@ A simple feature-flag API that can be used for toggling functionality.
 
     $features->setUser(['id' => 123]);
 
-    $features->enable('new_calendar', function($user) {
-        return isset($user['id']) && in_array($user['id'], [1, 2, 5]);
+    $features->enable('new_calendar', function(Feature\User $user) {
+        return in_array($user->id, [1, 2, 5]);
     });
 
     if ($features->can('new_calendar')) {

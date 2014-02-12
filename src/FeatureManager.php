@@ -8,7 +8,7 @@ class FeatureManager
 {
     /** @var array Hash of feature names to a list of callables */
     protected $toggles;
-    /** @var mixed User attributes */
+    /** @var \Feature\User User attributes */
     protected $user;
 
     public function __construct()
@@ -60,10 +60,9 @@ class FeatureManager
 
     /**
      * Set user attributes
-     * @param mixed $attributes
-     * @todo Decide to use an array or some container object
+     * @param \Feature\User $attributes
      */
-    public function setUser($attributes)
+    public function setUser(User $attributes)
     {
         $this->user = $attributes;
     }
