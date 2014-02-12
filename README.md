@@ -1,4 +1,4 @@
-# feature/feature
+# feature/feature [![Build status](http://img.shields.io/travis/rmasters/feature.svg)](https://travis-ci.org/rmasters/feature)
 
 A simple feature-flag API that can be used for toggling functionality.
 
