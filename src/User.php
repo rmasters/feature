@@ -22,10 +22,13 @@ class User
     const USER_REFERER = 'user_referer';
     const USER_AGENT = 'user_agent';
 
-
-    public function __construct()
+    /**
+     * Create a new user information container
+     * @param array|null $attributes
+     */
+    public function __construct(array $attributes = [])
     {
-        $this->attributes = [];
+        $this->attributes = $attributes;
     }
 
     /**

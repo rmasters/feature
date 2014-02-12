@@ -6,7 +6,7 @@ A simple feature-flag API that can be used for toggling functionality.
 
     $features = new FeatureManager;
 
-    $features->setUser(['id' => 123]);
+    $features->setUser(new User(['id' => 1]));
 
     $features->enable('new_calendar', function(Feature\User $user) {
         return in_array($user->id, [1, 2, 5]);
