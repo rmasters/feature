@@ -1,5 +1,16 @@
 {
     "name": "feature/feature",
+    "descriptions": "Dead simple feature-flags",
+    "keywords": ["feature", "flag", "toggle"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ross Masters",
+            "email": "ross@rossmasters.com",
+            "homepage": "http://rossmasters.com/",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Feature\\": "src",
