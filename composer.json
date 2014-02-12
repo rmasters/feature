@@ -1,0 +1,9 @@
+{
+    "name": "feature/feature",
+    "autoload": {
+        "psr-4": {
+            "Feature\\": "src",
+            "Feature\\Tests\\": "tests"
+        }
+    }
+}
