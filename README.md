@@ -1,3 +1,5 @@
+# feature/feature
+
 A simple feature-flag API that can be used for toggling functionality.
 
 ## Usage
@@ -16,3 +18,4 @@ A simple feature-flag API that can be used for toggling functionality.
 
 Enable features by adding toggles that inspect attributes of the current user.
 Toggles can be as simple as a closure or any instance that implements `__invoke`.
+See [Toggle.php](src/Toggle.php) for an interface to implement.
