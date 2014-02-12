@@ -9,8 +9,6 @@ use Feature\Storage;
 
 /**
  * Array-based feature definitions
- *
- * Requires each toggle to be a defined class, rather than closures.
  */
 class Structured extends Base implements Storage
 {
