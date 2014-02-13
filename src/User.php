@@ -2,10 +2,12 @@
 
 namespace Feature;
 
+use ArrayAccess;
+
 /**
  * Container for user information
  */
-class User
+class User implements ArrayAccess
 {
     protected $attributes;
 
