@@ -54,7 +54,7 @@ class User implements ArrayAccess
         $this->set(static::HOST_NAME, $get('SERVER_NAME'));
 
         // Query string vars
-        $qs = parse_str($get('QUERY_STRING'));
+        parse_str($get('QUERY_STRING'), $qs);
         $this->set(static::QUERY_STRING, $qs);
 
         // Client headers

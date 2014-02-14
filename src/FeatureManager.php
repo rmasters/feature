@@ -2,8 +2,6 @@
 
 namespace Feature;
 
-use InvalidArgumentException;
-
 class FeatureManager
 {
     /** @var array Hash of feature names to a list of callables */
