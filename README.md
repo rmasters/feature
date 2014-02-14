@@ -1,4 +1,4 @@
-# feature/feature [![Build status](http://img.shields.io/travis/rmasters/feature.svg)](https://travis-ci.org/rmasters/feature)
+# feature/feature [![Build status](http://img.shields.io/travis/rmasters/feature.svg)](https://travis-ci.org/rmasters/feature) [![Coverage Status](https://coveralls.io/repos/rmasters/feature/badge.png)](https://coveralls.io/r/rmasters/feature)
 
 A simple feature-flag API that can be used for toggling functionality.
 

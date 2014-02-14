@@ -16,5 +16,8 @@
             "Feature\\": "src",
             "Feature\\Tests\\": "tests"
         }
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
     }
 }
