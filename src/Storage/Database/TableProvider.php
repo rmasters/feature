@@ -40,10 +40,9 @@ abstract class TableProvider
                 $features[$featureName] = [];
             }
 
-            $featureToggle = ['name' => $toggleName];
+            $feature = ['name' => $toggleName];
             if (isset($arguments[$toggleId])) {
-                $args = $this->mergeArguments($arguments[$toggleId]);
-                $featureToggle['params'] = $args;
+                $feature['params'] = $this->mergeArguments($arguments[$toggleId]);
             }
 
             $features[$featureName][] = $feature;
