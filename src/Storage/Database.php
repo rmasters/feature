@@ -6,6 +6,7 @@ use Exception;
 use ReflectionClass;
 use Feature\FeatureManager;
 use Feature\Storage;
+use Feature\Storage\Database\TableProvider;
 
 /**
  * Retrieves feature/toggle definitions from a database
